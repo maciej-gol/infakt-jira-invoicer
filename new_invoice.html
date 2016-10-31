@@ -1,0 +1,72 @@
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"
+              integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi"
+              crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="form-container">
+            <form>
+                <div class="form-group">
+                    <label for="api-key"> Klucz API </label>
+                    <input type="text" class="form-control" id="api-key">
+                </div>
+                <div class="form-group">
+                    <label for="hourly-salary"> Stawka godzinowa </label>
+                    <input type="text" class="form-control" id="hourly-salary">
+                </div>
+                <div class="form-group">
+                    <label for="jira-host"> Serwer jiry </label>
+                    <input type="text" class="form-control" id="jira-host">
+                </div>
+                <div class="form-group">
+                    <label for="period"> Okres (MMYY) </label>
+                    <input type="text" class="form-control" id="period">
+                </div>
+                <div class="form-group">
+                    <label for="position"> Pozycja </label>
+                    <input type="text" class="form-control" id="position">
+                </div>
+                <div class="form-group">
+                    <label for="client"> Klient (wymaga klucza API) </label>
+                    <br/>
+                    <select id="client">
+                        <option value=""> ----- </option>
+                    </select>
+                </div>
+            </form>
+
+            <button type="button" class="btn btn-primary btn-sm" id="fetch-data"> Pobierz dane </button>
+
+            <br />
+            <small>
+                <span class="warning"> Uwaga: klucz API, stawka oraz adres serwera jiry są zapisywane w niezaszyfrowanym local storage </span>
+            </small>
+        </div>
+        <div class="invoice-container">
+            <button type="button" class="btn btn-primary btn-sm" id="new-invoice" disabled> Utwórz fakturę w inFakt </button>
+            <a href="#" style="display: none;" target="_blank" id="invoice-url"> Link do faktury </a>
+
+            <table class="invoice-products">
+                <thead>
+                    <th> Produkt </th>
+                    <th> Ilość </th>
+                </thead>
+                <tbody id="products"> </tbody>
+            </table>
+        </div>
+
+        <script type="text/javascript" src="nanoajax.min.js"> </script>
+        <script type="text/javascript" src="js/utils.js"> </script>
+        <script type="text/javascript" src="js/observable.js"> </script>
+        <script type="text/javascript" src="js/storedValue.js"> </script>
+        <script type="text/javascript" src="js/infakt.js"> </script>
+        <script type="text/javascript" src="js/jira.js"> </script>
+        <script type="text/javascript" src="js/client.js"> </script>
+        <script type="text/javascript" src="js/invoice.js"> </script>
+        <script type="text/javascript" src="js/invoice-form.js"> </script>
+    </body>
+</head>

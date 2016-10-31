@@ -1,0 +1,34 @@
+body {
+    padding: 5px 10px;
+}
+
+.form-container {
+    border-width: .2rem;
+    border: solid #f7f7f9;
+    display: inline-block;
+    padding: 5px 10px;
+    width: 300px;
+}
+
+.warning {
+    color: red;
+}
+
+.invoice-container {
+    border-width: .2rem;
+    border: solid #f7f7f9;
+    display: inline-block;
+    min-width: 500px;
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+.invoice-products th {
+    text-align: center;
+    width: 100px;
+}
+
+.invoice-products th:first-child {
+    min-width: 400px;
+    text-align: left;
+}
